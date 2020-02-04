@@ -1,5 +1,5 @@
 class VoterSerializer < ActiveModel::Serializer
   attributes :id, :general, :states
-  # has_many :states, key :state_options, serializer: VoterSerializer
+  has_many :states, serializer: StateSerializer
 
 end
