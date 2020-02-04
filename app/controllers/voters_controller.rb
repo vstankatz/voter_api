@@ -5,7 +5,7 @@ class VotersController < ApplicationController
   def index
     @voters = Voter.all
 
-    render json: @voters, include: 'state'
+    render json: @voters, exclude: :id
   end
 
   # GET /voters/1
