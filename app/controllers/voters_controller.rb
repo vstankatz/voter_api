@@ -6,7 +6,7 @@ class VotersController < ApplicationController
     @voters = Voter.all
 
     render json: @voters, exclude: :id
-  end
+      end
 
   # GET /voters/1
   def show
