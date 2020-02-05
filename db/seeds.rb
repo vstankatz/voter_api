@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Voter.destroy_all
 State.destroy_all
+
 Voter.create ([{
 
-general: 'gernal info for all'
-}])
-voters = Voter.all.map { |v| v.id}
+  general: 'gernal info for all'
+  }])
+  voters = Voter.all.map { |v| v.id}
 
   State.create ([{
     name: 'Oregon',
@@ -22,23 +23,31 @@ voters = Voter.all.map { |v| v.id}
       name: "merkley",
       number: 123456,
       hours: '8-5'},
-    {
-      name: "butter",
-      number: 123456,
-      hours: '8-5'
-      }],
-    absentee: 'info for absentee ballots',
-    voter_id: voters[rand(voters.length)]
-  }])
+      {
+        name: "butter",
+        number: 123456,
+        hours: '8-5'
+        }],
+        absentee: 'info for absentee ballots',
+        voter_id: voters[rand(voters.length)]
+        }])
 
-p "Created #{Voter.count} Setup."
-p "Created #{State.count} States."
+    states = State.all.map { |s| s.id}
 
-# 50.times do |state|
-#   senators = []
-#   2.times do |senator| {
-#     name = Faker::Name
-#     senators.push ( {name: name, number: Faker::Number} )
-#   }
-#   State.create!({name: Faker::StateName, senators: senators, code: asdf})
-# end
+        CurrentPolitician.create ([{
+          senators: 'senator sample',
+          representatives: 'ss',
+          state_id: states[rand(states.length)]
+          }])
+
+          p "Created #{Voter.count} Setup."
+          p "Created #{State.count} States."
+
+          # 50.times do |state|
+          #   senators = []
+          #   2.times do |senator| {
+          #     name = Faker::Name
+          #     senators.push ( {name: name, number: Faker::Number} )
+          #   }
+          #   State.create!({name: Faker::StateName, senators: senators, code: asdf})
+          # end
