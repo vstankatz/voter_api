@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_235454) do
+ActiveRecord::Schema.define(version: 2020_02_04_222930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 2020_02_03_235454) do
     t.text "senators"
     t.text "representatives"
     t.integer "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "senators", force: :cascade do |t|
+    t.string "name"
+    t.string "affiliation"
+    t.string "phone"
+    t.integer "current_politician_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,5 +51,7 @@ ActiveRecord::Schema.define(version: 2020_02_03_235454) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "current_politicians", "states"
+  add_foreign_key "senators", "current_politicians"
   add_foreign_key "states", "voters"
 end
