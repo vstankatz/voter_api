@@ -46,6 +46,6 @@ class VotersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def voter_params
-      params.require(:voter).permit(:general, state_attributes: [ :id, :name, :code, :whats_needed, :primary, :absentee ] )
+      params.require(:voter).permit(:general, state_attributes: [ :id, :name, :code, :whats_needed, :primary, :absentee] )
     end
 end

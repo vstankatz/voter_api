@@ -46,6 +46,6 @@ class StatesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def state_params
-      params.require(:state).permit(:whats_needed, :primary, :absentee, :senators, current_politician_attributes: [ :id, :senators, :representatives ])
+      params.require(:state).permit(:whats_needed, :primary, :absentee, senator_attributes: [ :id, :name, :phone ])
     end
 end
