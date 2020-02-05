@@ -4,7 +4,7 @@ class CreateSenators < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :affiliation
       t.string :phone
-      t.integer :current_politician_id
+      t.integer :state_id
 
       t.timestamps
     end
