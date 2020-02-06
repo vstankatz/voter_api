@@ -3,9 +3,20 @@ class StatesController < ApplicationController
 
   # GET /states
   def index
+    if params[:search]
+      @state = State.search(params[:search])
+      if @state.blank?
+        render status: 200, json: {
+          message: "No state found."
+        }
+      else
+        render json: @state
+      end
+    else
     @states = State.all.sort_by { |s| [s.name]}
 
     render json: @states
+  end
   end
 
   # GET /states/1

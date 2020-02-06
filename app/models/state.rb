@@ -8,5 +8,7 @@ class State < ApplicationRecord
   accepts_nested_attributes_for :senators, :allow_destroy => true
   accepts_nested_attributes_for :elections, :allow_destroy => true
   accepts_nested_attributes_for :ballot_measures, :allow_destroy => true
+
+   scope :search, -> (search_parameter) { where("code like ?", "#{search_parameter}") }
   # accepts_nested_attributes_for :upcomings, :allow_destroy => true
 end
