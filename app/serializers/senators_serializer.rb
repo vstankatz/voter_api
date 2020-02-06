@@ -1,4 +1,4 @@
 class SenatorsSerializer < ActiveModel::Serializer
-  attributes :id, :name, :phone
+  attributes :name, :phone
   belongs_to :states, optional: true
 end
