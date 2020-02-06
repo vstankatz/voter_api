@@ -556,11 +556,11 @@ Voter.create ([{
         end
       end
       else
-
+        ## Place ballot measures here!!
       end
     end
     end
-    
+
     p "Created #{Voter.count} Setup."
     p "Created #{State.count} States."
     p "Created #{Senator.count} Senators."
