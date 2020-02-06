@@ -3,7 +3,7 @@ class StatesController < ApplicationController
 
   # GET /states
   def index
-    @states = State.all
+    @states = State.all.sort_by { |s| [s.name]}
 
     render json: @states
   end
@@ -46,6 +46,6 @@ class StatesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def state_params
-      params.require(:state).permit(:whats_needed, :primary, :absentee, :govenor, :govenor_phone, :voting_id, senator_attributes: [ :id, :name, :phone ], election_attributes: [:candidate, :party, :url, :running_for])
+      params.require(:state).permit(:whats_needed, :primary, :absentee, :govenor, :govenor_phone, :voting_id, :id_needed, senator_attributes: [ :id, :name, :phone ], election_attributes: [:candidate, :party, :url, :running_for], ballot_measure_attributes: [:name, :sub_title, :info_page])
     end
 end
