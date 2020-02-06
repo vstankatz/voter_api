@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Voter.destroy_all
 State.destroy_all
-
+Senator.destroy_all
+Election.destroy_all
 Voter.create ([{
 
   general: 'gernal info for all'
@@ -17,7 +18,7 @@ Voter.create ([{
   State.create ([{
     name: 'Alabama',
     code: 'AL',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -26,7 +27,7 @@ Voter.create ([{
   {
     name: 'Alaska',
     code: 'AK',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -35,7 +36,7 @@ Voter.create ([{
   {
     name: 'Arizona',
     code: 'AZ',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -44,7 +45,7 @@ Voter.create ([{
   {
     name: 'Arkansas',
     code: 'AK',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -53,7 +54,7 @@ Voter.create ([{
   {
     name: 'California',
     code: 'CA',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -62,7 +63,7 @@ Voter.create ([{
   {
     name: 'Colorado',
     code: 'CO',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -71,7 +72,7 @@ Voter.create ([{
   {
     name: 'Connecticut',
     code: 'CT',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -80,7 +81,7 @@ Voter.create ([{
   {
     name: 'Delaware',
     code: 'DE',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -89,7 +90,7 @@ Voter.create ([{
   # {
   #   name: 'District of Columbia',
   #   code: 'DC',
-  #   voting_id: ' required',#
+  #   id_needed: ' required',#
   # whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
   #   primary: 'requirements for primary/caucus',
   #   absentee: 'info for absentee ballots',
@@ -98,7 +99,7 @@ Voter.create ([{
   {
     name: 'Florida',
     code: 'FL',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -107,7 +108,7 @@ Voter.create ([{
   {
     name: 'Georgia',
     code: 'GA',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -116,7 +117,7 @@ Voter.create ([{
   {
     name: 'Hawaii',
     code: 'HI',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -125,7 +126,7 @@ Voter.create ([{
   {
     name: 'Idaho',
     code: 'ID',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -134,7 +135,7 @@ Voter.create ([{
   {
     name: 'Illinois',
     code: 'IL',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -143,7 +144,7 @@ Voter.create ([{
   {
     name: 'Indiana',
     code: 'IN',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -152,7 +153,7 @@ Voter.create ([{
   {
     name: 'Iowa',
     code: 'IA',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -161,7 +162,7 @@ Voter.create ([{
   {
     name: 'Kansas',
     code: 'KS',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -170,7 +171,7 @@ Voter.create ([{
   {
     name: 'Kentucky',
     code: 'KY',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -179,7 +180,7 @@ Voter.create ([{
   {
     name: 'Louisiana',
     code: 'LA',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -188,7 +189,7 @@ Voter.create ([{
   {
     name: 'Maine',
     code: 'ME',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -197,7 +198,7 @@ Voter.create ([{
   {
     name: 'Maryland',
     code: 'MD',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -206,7 +207,7 @@ Voter.create ([{
   {
     name: 'Massachusettts',
     code: 'MA',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -215,7 +216,7 @@ Voter.create ([{
   {
     name: 'Michigan',
     code: 'MI',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -224,7 +225,7 @@ Voter.create ([{
   {
     name: 'Minnesota',
     code: 'MN',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -233,7 +234,7 @@ Voter.create ([{
   {
     name: 'Mississippi',
     code: 'MS',
-    voting_id: 'Photo-ID required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -242,7 +243,7 @@ Voter.create ([{
   {
     name: 'Missouri',
     code: 'MO',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -251,7 +252,7 @@ Voter.create ([{
   {
     name: 'Montana',
     code: 'MT',
-    voting_id: 'ID required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -260,7 +261,7 @@ Voter.create ([{
   {
     name: 'Nebraska',
     code: 'NE',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -269,7 +270,7 @@ Voter.create ([{
   {
     name: 'Nevada',
     code: 'NV',
-    voting_id: 'No ID required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -278,7 +279,7 @@ Voter.create ([{
   {
     name: 'New Hampshire',
     code: 'NH',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -287,7 +288,7 @@ Voter.create ([{
   {
     name: 'New Jersey',
     code: 'NJ',
-    voting_id: ' required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -296,7 +297,7 @@ Voter.create ([{
   {
     name: 'New Mexico',
     code: 'NM',
-    voting_id: ' required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -305,7 +306,7 @@ Voter.create ([{
   {
     name: 'New York',
     code: 'NY',
-    voting_id: ' required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -314,7 +315,7 @@ Voter.create ([{
   {
     name: 'North Carolina',
     code: 'NC',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -323,7 +324,7 @@ Voter.create ([{
   {
     name: 'North Dakota',
     code: 'ND',
-    voting_id: ' required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -332,7 +333,7 @@ Voter.create ([{
   {
     name: 'Ohio',
     code: 'OH',
-    voting_id: ' required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -341,7 +342,7 @@ Voter.create ([{
   {
     name: 'Oklahoma',
     code: 'OK',
-    voting_id: ' required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -350,7 +351,7 @@ Voter.create ([{
   {
     name: 'Oregon',
     code: 'OR',
-    voting_id: ' required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -359,7 +360,7 @@ Voter.create ([{
   {
     name: 'Pennsylvania',
     code: 'PA',
-    voting_id: ' required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -368,7 +369,7 @@ Voter.create ([{
   {
     name: 'Rhode Island',
     code: 'RI',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -377,7 +378,7 @@ Voter.create ([{
   {
     name: 'Sourth Carolina',
     code: 'SC',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -386,7 +387,7 @@ Voter.create ([{
   {
     name: 'South Dakota',
     code: 'SD',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -395,7 +396,7 @@ Voter.create ([{
   {
     name: 'Tennessee',
     code: 'TN',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -404,7 +405,7 @@ Voter.create ([{
   {
     name: 'Texas',
     code: 'TX',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -413,7 +414,7 @@ Voter.create ([{
   {
     name: 'Utah',
     code: 'UT',
-    voting_id: ' required',
+    id_needed: 'ID required for registered voters, not necessarily with a photo',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -422,7 +423,7 @@ Voter.create ([{
   {
     name: 'Vermont',
     code: 'VT',
-    voting_id: ' required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -431,7 +432,7 @@ Voter.create ([{
   {
     name: 'Virginia',
     code: 'VA',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -440,7 +441,7 @@ Voter.create ([{
   {
     name: 'Washington',
     code: 'WA',
-    voting_id: ' required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -449,7 +450,7 @@ Voter.create ([{
   {
     name: 'West Virginia',
     code: 'WV',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -458,7 +459,7 @@ Voter.create ([{
   {
     name: 'Wisconsin',
     code: 'WI',
-    voting_id: ' required',
+    id_needed: 'Photo-ID required',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -467,7 +468,7 @@ Voter.create ([{
   {
     name: 'Wyoming',
     code: 'WY',
-    voting_id: ' required',
+    id_needed: 'No ID required for registered voters',
     whats_needed: "https://ballotpedia.org/Voter_identification_laws_by_state",
     primary: 'requirements for primary/caucus',
     absentee: 'info for absentee ballots',
@@ -489,10 +490,16 @@ Voter.create ([{
       if state_name === 'Georgia'
         # puts "https://www.googleapis.com/civicinfo/v2/representatives?&address=#{state_code}&"
         data = JSON.parse( RestClient.get("https://www.googleapis.com/civicinfo/v2/representatives?&address=#{state_code}&key=" + ENV["GOOGLE_API_KEY"]))
+
         s.update({:govenor_phone => 'N/A'})
+
+        election = JSON.parse( RestClient.get("https://www.googleapis.com/civicinfo/v2/voterinfo?address=#{state_code}&electionId=2000&key=" + ENV["GOOGLE_API_KEY"]))
       else
         data = JSON.parse( RestClient.get("https://www.googleapis.com/civicinfo/v2/representatives?&address=#{state_name}&key=" + ENV["GOOGLE_API_KEY"]))
+
         s.update({:govenor_phone => data["officials"][4]["phones"][0]})
+
+        election = JSON.parse( RestClient.get("https://www.googleapis.com/civicinfo/v2/voterinfo?address=#{s.name}&electionId=2000&key=" + ENV["GOOGLE_API_KEY"]))
       end
 
       if state_name.include? " "
@@ -527,11 +534,37 @@ Voter.create ([{
       else
         puts "not saved"
       end
-    end
 
+      election["contests"].each do |elect|
+      if elect["type"] === 'General'
+        elect["candidates"].each do |cand|
+        cand = Election.new do |key|
+          key.candidate = cand["name"]
+          key.running_for = elect["office"]
+          key.party = cand["party"]
+          if cand["url"].blank?
+            key.url = 'N/A'
+          else
+          key.url = cand["candidateUrl"]
+          end
+          key.state_id = state_id
+        end
+        if cand.save
+          puts "saved election for #{cand.candidate}"
+        else
+          puts "not saved for #{cand.candidate}"
+        end
+      end
+      else
+
+      end
+    end
+    end
+    
     p "Created #{Voter.count} Setup."
     p "Created #{State.count} States."
     p "Created #{Senator.count} Senators."
+    p "Created #{Election.count} Elections."
     # 50.times do |state|
     #   senators = []
     #   2.times do |senator| {
