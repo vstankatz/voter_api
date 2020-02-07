@@ -613,11 +613,3 @@ Voter.create ([{
     p "Created #{Election.count} Elections."
     p "Created #{BallotMeasure.count} Ballot Measures"
     p "Created #{Upcoming.count} Upcoming Elections"
-    # 50.times do |state|
-    #   senators = []
-    #   2.times do |senator| {
-    #     name = Faker::Name
-    #     senators.push ( {name: name, number: Faker::Number} )
-    #   }
-    #   State.create!({name: Faker::StateName, senators: senators, code: asdf})
-    # end
